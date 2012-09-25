@@ -1,83 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"      
-      xmlns:h="http://java.sun.com/jsf/html">
-
-    <h:head>
-        <title>Conrard &amp; Dumas</title>
-
-        <!-- The styles -->
-        <h:outputStylesheet library="bootstrap" name="css/bootstrap.css" /> 
-        <h:outputStylesheet library="bootstrap" name="css/bootstrap-responsive.css" />
-        <h:outputStylesheet library="bootstrap" name="css/font-awesome.css" />
-    </h:head>
-    <h:body>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="span1">
-                    <h2><i class="icon-home"/> </h2>
-                </div>
-                <div class="span11">
-                    <h1> Conrard &amp; Dumas Plomberie</h1>
-                </div>
-            </div>
-
-            <div class="row-fluid">
-                <div>
-                    <h2>Entreprise spécialisée dans :</h2>
-                    <ul>
-                        <li>Plomberie,</li>
-                        <li>Climatisation,</li>
-                        <li>Chauffage,</li>
-                        <li>Chauffage,</li>
-                        <li>Sanitaire,</li>
-                        <li>Pompe à chaleur,</li>
-                        <li>VMC,</li>
-                        <li>Double flux,</li>
-                        <li>Installation,</li>
-                        <li>Dépannage.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div>
-                    <h2>Contacts :</h2>
-                    Léand Dumas : 07 61 10 01 15
-                </div>
-            </div>
-
-            <div class="row-fluid">
-                <div id="myCarousel" class="carousel slide" data-interval="2000" style="margin-top: 20px; line-height: 100%;width: 500px;height: 500px;">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item" style="width: 500px;height: 500px;">
-                            <img src="resources/img/flocon.jpg" alt=""/>
-                            <div class="carousel-caption">
-                                <h4>Un flocon</h4>
-                                <p>Pour enfin être au frais en été !</p>
-                            </div>
-                        </div>
-                        <div class="item" style="width: 500px;height: 500px;">
-                            <img src="resources/img/logo.jpg" alt=""/>
-                            <div class="carousel-caption">
-                                <h4>Logo</h4>
-                                <p>Un bien joli logo.</p>
-                            </div>
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <div class="row-fluid masthead">
+        <div id="myCarousel" class="carousel slide" data-interval="2000" style="margin-top: 20px; line-height: 100%;width: 500px;height: 500px;">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <ui:insert name="carousel-content">
+                    <div class="active item" style="width: 500px;height: 500px;">
+                        <img src="resources/img/flocon.jpg" alt=""/>
+                        <div class="carousel-caption">
+                            <h4>Un flocon</h4>
+                            <p>Pour enfin être au frais en été !</p>
                         </div>
                     </div>
-                    <!-- Carousel nav -->
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
-                </div>
+                </ui:insert>
             </div>
+            <!-- Carousel nav -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
         </div>
-
-        <!-- The javascript
-    ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <h:outputScript library="js" name="jquery-1.8.0.min.js" />
-        <h:outputScript library="bootstrap" name="js/bootstrap.js" />
-        <h:outputScript library="js" name="conrardEtDumas.js" />
-    </h:body>
+    </div>
 </html>
