@@ -10,7 +10,19 @@
     padding: 70px 0 80px;
 }
 
-.navbar-white{
+
+.header{
     background: white;
+    top: 0;
+    z-index: 1030;
+    margin: 0;
+    overflow: visible;
+}
+.subhead{
+    background: white;
+    z-index: 1000;
+}
+.follow{
+    position: relative;
 }
 

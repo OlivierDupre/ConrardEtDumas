@@ -13,24 +13,44 @@
         <h:outputStylesheet library="bootstrap" name="css/bootstrap-responsive.css" />
         <h:outputStylesheet library="bootstrap" name="css/font-awesome.css" />
         <h:outputStylesheet library="cd" name="css/cetd.css" />
+
+        <!-- Be responsive ... -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <div class="container-fluid">
-            <ui:insert name="company-area">
-                <ui:include src="/templates/company.xhtml"/>
-            </ui:insert>
+        <div class="container">
+            <div class="row header">
+                <h1>Conrard &amp; Dumas Plomberie</h1>
+            </div>
 
-            <ui:insert name="contact-area">
-                <ui:include src="/templates/contact.xhtml"/>
-            </ui:insert>
-
-            <ui:insert name="carousel-area">
-                <ui:include src="/templates/carousel.xhtml"/>
-            </ui:insert>
+            <div class="subhead">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab-home" data-toggle="tab">Accueil</a></li>
+                    <li><a href="#tab-contact" data-toggle="tab">Contact</a></li>
+                    <li><a href="#tab-galery" data-toggle="tab">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="tab-content follow">
+                <div class="tab-pane active" id="tab-home">
+                    <ui:insert name="company-area">
+                        <ui:include src="/templates/company.xhtml"/>
+                    </ui:insert>
+                </div>
+                <div class="tab-pane" id="tab-contact">
+                    <ui:insert name="contact-area">
+                        <ui:include src="/templates/contact.xhtml"/>
+                    </ui:insert>
+                </div>
+                <div class="tab-pane" id="tab-galery">
+                    <ui:insert name="carousel-area">
+                        <ui:include src="/templates/carousel.xhtml"/>
+                    </ui:insert>
+                </div>
+            </div>
         </div>
 
         <!-- The javascript
-    ================================================== -->
+        ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <h:outputScript library="js" name="jquery-1.8.0.min.js" />
         <h:outputScript library="bootstrap" name="js/bootstrap.js" />

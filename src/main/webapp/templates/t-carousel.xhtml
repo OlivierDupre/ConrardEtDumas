@@ -2,24 +2,22 @@
 <!DOCTYPE html>
 <html   xmlns="http://www.w3.org/1999/xhtml"
         xmlns:ui="http://java.sun.com/jsf/facelets">
-    
-    <div class="row-fluid masthead">
-        <div id="myCarousel" class="carousel slide" data-interval="2000" style="margin-top: 20px; line-height: 100%;width: 500px;height: 500px;">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-                <ui:insert name="carousel-content">
-                    <div class="active item" style="width: 500px;height: 500px;">
-                        <img src="resources/img/flocon.jpg" alt=""/>
-                        <div class="carousel-caption">
-                            <h4>Un flocon</h4>
-                            <p>Pour enfin être au frais en été !</p>
-                        </div>
+
+    <div id="myCarousel" class="carousel slide" data-interval="2000" style="margin-top: 20px; line-height: 100%;width: 500px;height: 500px;">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <ui:insert name="carousel-content">
+                <div class="active item" style="width: 500px;height: 500px;">
+                    <img src="resources/img/flocon.jpg" alt=""/>
+                    <div class="carousel-caption">
+                        <h4>Un flocon</h4>
+                        <p>Pour enfin être au frais en été !</p>
                     </div>
-                </ui:insert>
-            </div>
-            <!-- Carousel nav -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+                </div>
+            </ui:insert>
         </div>
+        <!-- Carousel nav -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
     </div>
 </html>
