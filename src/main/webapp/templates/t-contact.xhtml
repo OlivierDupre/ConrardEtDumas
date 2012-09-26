@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
 
     <ui:insert name="contact">
-        <div>
-            <h2>Contacts :</h2>
-            Léand Dumas : 07 xx xx xx xx
-            M. Conrard : 06 xx xx xx xx
+        <div class="row">
+            <div class="span8">
+                <ui:insert name="contact-form">
+                    <h:form />
+                </ui:insert>
+            </div>
+
+            <div class="span4">
+                <ui:insert name="contact-details">
+                    <i class="icon-user"/> Léand : 07 xx xx xx xx xx<br/>
+                    <i class="icon-user"/> Conrard : 06 xx xx xx xx<br/>
+                    <i class=" icon-home"/> Horaires : du Lundi au Vendredi de 8 à 18h.
+                </ui:insert>
+            </div>
+
         </div>
     </ui:insert>
 </html>
